@@ -61,11 +61,7 @@ document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 });
 document.getElementById("roast-selection").addEventListener("change", updateCoffees);
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-tbody.innerHTML = renderCoffees(coffees);
-submitButton.addEventListener('click', function (e) {
+document.getElementById("submit").addEventListener('click', function (e) {
 	e.preventDefault();
 	coffees.push(
 		{
@@ -76,3 +72,6 @@ submitButton.addEventListener('click', function (e) {
 	)
 	updateCoffees(e);
 });
+var tbody = document.querySelector('#coffees');
+var roastSelection = document.querySelector('#roast-selection');
+tbody.innerHTML = renderCoffees(coffees);
