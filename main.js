@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
 	var html = '<div class="coffee">';
 	html += '<div class="coffee-id">' + coffee.id + '</div>';
-	html += '<h1>' + coffee.name + '</h1>';
+	html += '<h2>' + coffee.name + '</h2>';
 	html += '<p>' + coffee.roast + '</p>';
 	html += '</div>';
 	return html;
@@ -65,4 +65,14 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', function (e) {
+	e.preventDefault();
+	coffees.push(
+		{
+			id: coffees.length,
+			name: document.getElementById("newCoffee").value,
+			roast: document.getElementById("addRoast").value
+		}
+	)
+	updateCoffees(e);
+});

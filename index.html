@@ -7,8 +7,7 @@
 </head>
 <body>
 	<h1>Coffee!</h1>
-	
-	<form name="coffeeForm">
+	<form>
 		<label for="roast-selection"></label>
 		<select id="roast-selection">
 			<option>all roasts</option>
@@ -16,8 +15,19 @@
 			<option>medium</option>
 			<option>dark</option>
 		</select>
-		<input id="submit" type="submit"> <input id="coffeeSearch" name="coffeeSearch" type="text" placeholder="Coffee Search">
-		<button id="coffee-search-btn" type="button">Search</button>
+		<label><input id="coffeeSearch" type="text" placeholder="Coffee Search"></label>
+		<button>Search</button>
+	</form>
+	<h1>Add Coffee</h1>
+	<form name="addCoffee">
+		<label>
+			<select id="addRoast">
+				<option>light</option>
+				<option>medium</option>
+				<option>dark</option>
+			</select>
+		</label> <label> <input id="newCoffee" name="newCoffee" type="text"> </label>
+		<button id="submit" type="submit">Add Coffee</button>
 	</form>
 	<div id="coffees"></div>
 	<script src="main.js"></script>
