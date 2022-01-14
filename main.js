@@ -67,7 +67,7 @@ document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 // listener for updating the displayed coffees based on user's roast selection by calling updateCoffees function
 document.getElementById("roast-selection").addEventListener("change", updateCoffees);
 // listener for adding a new coffee object to the coffees array
-document.getElementById("submit").addEventListener('click', function (e) {
+document.getElementById("addCoffeeButton").addEventListener('click', function (e) {
 	e.preventDefault();
 	if (document.getElementById("newCoffee").value === "") {
 		alert("Please name your coffee!");
