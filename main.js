@@ -53,6 +53,12 @@ let coffees = [
 	{id: 13, name: 'Italian', roast: '(dark roast)'},
 	{id: 14, name: 'French', roast: '(dark roast)'},
 ];
+// store coffee array in localStorage
+if (localStorage.getItem("coffees") === null) {
+	localStorage.setItem("coffees", JSON.stringify(coffees));
+} else {
+	coffees = JSON.parse(localStorage.getItem("coffees"));
+}
 // listener for updating the displayed coffees based on user's search input
 document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 	let userSearch = document.getElementById("coffeeSearch").value.toUpperCase();
@@ -80,6 +86,7 @@ document.getElementById("addCoffeeButton").addEventListener('click', function (e
 				roast: document.getElementById("addRoast").value
 			}
 		)
+		localStorage.setItem("coffees", JSON.stringify(coffees));
 		document.getElementById("newCoffee").value = "";
 		updateCoffees(e);
 	}
