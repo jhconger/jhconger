@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 	<meta charset="UTF-8">
 	<title></title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+<header id="header">
 	<h1>Coffee!</h1>
 	<h2>Add New Coffee</h2>
 	<form name="addCoffee">
 		<label>
-			Coffee Name <input id="newCoffee" name="newCoffee" type="text"></label>
+			Coffee Name <input class="coffeeInput"  id="newCoffee" name="newCoffee" type="text"></label>
 		<label>
 			Select Roast
-			<select id="addRoast">
-				<option>light</option>
-				<option>medium</option>
-				<option>dark</option>
+			<select class="roast" id="addRoast">
+				<option class="roast">(light roast)</option>
+				<option class="roast">(medium roast)</option>
+				<option class="roast">(dark roast)</option>
 			</select>
 		</label>
 		<button id="addCoffeeButton" type="submit">Add Coffee</button>
 	</form>
 	<h2>Coffee List</h2>
-	<form>
+	<form >
 		<label for="roast-selection"></label>
-		<select id="roast-selection">
-			<option selected>all roasts</option>
-			<option>light</option>
-			<option>medium</option>
-			<option>dark</option>
+		<select class="roast" id="roast-selection">
+			<option class="roast" selected>(all roasts)</option>
+			<option class="roast">(light roast)</option>
+			<option class="roast">(medium roast)</option>
+			<option class="roast">(dark roast)</option>
 		</select>
-		<label><input id="coffeeSearch" type="text" placeholder="Search by name"></label>
+		<label><input class="roast" id="coffeeSearch" type="text" placeholder="Search by name"></label>
 	</form>
 	<div id="coffees"></div>
 	<script src="main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
