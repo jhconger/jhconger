@@ -7,27 +7,30 @@
 </head>
 <body>
 	<h1>Coffee!</h1>
-	<form>
-		<label for="roast-selection"></label>
-		<select id="roast-selection">
-			<option>all roasts</option>
-			<option>light</option>
-			<option>medium</option>
-			<option>dark</option>
-		</select>
-		<label><input id="coffeeSearch" type="text" placeholder="Coffee Search"></label>
-		<button>Search</button>
-	</form>
-	<h1>Add Coffee</h1>
+	<h2>Add New Coffee</h2>
 	<form name="addCoffee">
 		<label>
+			Coffee Name <input id="newCoffee" name="newCoffee" type="text"></label>
+		<label>
+			Select Roast
 			<select id="addRoast">
 				<option>light</option>
 				<option>medium</option>
 				<option>dark</option>
 			</select>
-		</label> <label> <input id="newCoffee" name="newCoffee" type="text"> </label>
+		</label>
 		<button id="submit" type="submit">Add Coffee</button>
+	</form>
+	<h2>Coffee List</h2>
+	<form>
+		<label for="roast-selection"></label>
+		<select id="roast-selection">
+			<option selected>all roasts</option>
+			<option>light</option>
+			<option>medium</option>
+			<option>dark</option>
+		</select>
+		<label><input id="coffeeSearch" type="text" placeholder="Search by name"></label>
 	</form>
 	<div id="coffees"></div>
 	<script src="main.js"></script>

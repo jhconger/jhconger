@@ -1,27 +1,29 @@
-"use strict"
+"use strict";
 
+// function to convert one coffee object from array to html format
 function renderCoffee(coffee) {
-	var html = '<div class="coffee">';
+	let html = '<div class="coffee">';
 	html += '<div class="coffee-id">' + coffee.id + '</div>';
-	html += '<h2>' + coffee.name + '</h2>';
+	html += '<h3>' + coffee.name + '</h3>';
 	html += '<p>' + coffee.roast + '</p>';
 	html += '</div>';
 	return html;
 }
 
+// function to convert coffee objects to html by calling renderCoffee function
 function renderCoffees(coffees) {
-	var html = '';
-	for (var i = 0; i < coffees.length; i++) {
+	let html = '';
+	for (let i = 0; i < coffees.length; i++) {
 		html += renderCoffee(coffees[i]);
 	}
-	console.log(html);
 	return html;
 }
 
+// function to change the coffees displayed in html based on user's roast selection
 function updateCoffees(e) {
 	e.preventDefault(); // don't submit the form, we just want to update the data
-	var selectedRoast = roastSelection.value;
-	var filteredCoffees = [];
+	let selectedRoast = document.querySelector('#roast-selection').value;
+	let filteredCoffees = [];
 	coffees.forEach(function (coffee) {
 		if (coffee.roast === selectedRoast) {
 			filteredCoffees.push(coffee);
@@ -33,8 +35,9 @@ function updateCoffees(e) {
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// array of coffee objects
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
 	{id: 1, name: 'Light City', roast: 'light'},
 	{id: 2, name: 'Half City', roast: 'light'},
 	{id: 3, name: 'Cinnamon', roast: 'light'},
@@ -50,6 +53,7 @@ var coffees = [
 	{id: 13, name: 'Italian', roast: 'dark'},
 	{id: 14, name: 'French', roast: 'dark'},
 ];
+// listener for updating the displayed coffees based on user's search input
 document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 	let userSearch = document.getElementById("coffeeSearch").value.toUpperCase();
 	let filteredCoffees = [];
@@ -60,18 +64,26 @@ document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 	}
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 });
+// listener for updating the displayed coffees based on user's roast selection by calling updateCoffees function
 document.getElementById("roast-selection").addEventListener("change", updateCoffees);
+// listener for adding a new coffee object to the coffees array
 document.getElementById("submit").addEventListener('click', function (e) {
 	e.preventDefault();
-	coffees.push(
-		{
-			id: coffees.length,
-			name: document.getElementById("newCoffee").value,
-			roast: document.getElementById("addRoast").value
-		}
-	)
-	updateCoffees(e);
+	if (document.getElementById("newCoffee").value === "") {
+		alert("Please name your coffee!");
+	} else {
+		coffees.push(
+			{
+				id: coffees.length + 1,
+				name: document.getElementById("newCoffee").value,
+				roast: document.getElementById("addRoast").value
+			}
+		)
+		document.getElementById("newCoffee").value = "";
+		updateCoffees(e);
+	}
 });
-var tbody = document.querySelector('#coffees');
-var roastSelection = document.querySelector('#roast-selection');
+// variable to identify html element that will be changed by listeners
+let tbody = document.querySelector('#coffees');
+// creates the initial displayed coffees on page load by calling the renderCoffees function
 tbody.innerHTML = renderCoffees(coffees);
