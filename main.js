@@ -13,9 +13,9 @@ function renderCoffee(coffee) {
 // function to convert coffee objects to html by calling renderCoffee function
 function renderCoffees(coffees) {
 	let html = '';
-	for (let i = 0; i < coffees.length; i++) {
-		html += renderCoffee(coffees[i]);
-	}
+	coffees.forEach(function (coffee) {
+		html += renderCoffee(coffee);
+	});
 	return html;
 }
 
@@ -57,11 +57,11 @@ let coffees = [
 document.getElementById("coffeeSearch").addEventListener("keyup", function () {
 	let userSearch = document.getElementById("coffeeSearch").value.toUpperCase();
 	let filteredCoffees = [];
-	for (let i = 0; i < coffees.length; i++) {
-		if (coffees[i].name.toUpperCase().includes(userSearch)) {
-			filteredCoffees.push(coffees[i]);
+	coffees.forEach(function (coffee) {
+		if (coffee.name.toUpperCase().includes(userSearch)) {
+			filteredCoffees.push(coffee);
 		}
-	}
+	});
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 });
 // listener for updating the displayed coffees based on user's roast selection by calling updateCoffees function
