@@ -69,13 +69,14 @@ document.getElementById("roast-selection").addEventListener("change", updateCoff
 // listener for adding a new coffee object to the coffees array
 document.getElementById("addCoffeeButton").addEventListener('click', function (e) {
 	e.preventDefault();
-	if (document.getElementById("newCoffee").value === "") {
+	let newCoffeeName = document.getElementById("newCoffee").value;
+	if (newCoffeeName === "") {
 		alert("Please name your coffee!");
 	} else {
 		coffees.push(
 			{
 				id: coffees.length + 1,
-				name: document.getElementById("newCoffee").value,
+				name: newCoffeeName,
 				roast: document.getElementById("addRoast").value
 			}
 		)
