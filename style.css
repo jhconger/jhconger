@@ -1,14 +1,13 @@
-main::after {
+main {
 
     background-image: url("coffeePNG.png");
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 200px;
-    opacity: 75%;
-}
-main {
+
 
 }
+
 
 body {
     /*!*    background-color: #2f4353;*!*/
@@ -19,6 +18,7 @@ body {
     border-radius: 10px;
     margin: 5em;
     font-family: 'Orbitron', sans-serif;
+    padding: 15px;
 }
 
 h1 {
@@ -46,10 +46,17 @@ label {
 .roast {
     font-family: 'Ubuntu', sans-serif;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /*background-color: rgba(184, 134, 11, 0.13);*/
+    background-color: rgba(184, 134, 11, 0.13);
     border-radius: 25px;
     padding-left: 10px;
+}
 
+.roasted {
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: darkgoldenrod;
+    border-radius: 25px;
+    padding-left: 10px;
 }
 
 .coffee-id {
