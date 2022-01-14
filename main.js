@@ -95,3 +95,7 @@ document.getElementById("addCoffeeButton").addEventListener('click', function (e
 let tbody = document.querySelector('#coffees');
 // creates the initial displayed coffees on page load by calling the renderCoffees function
 tbody.innerHTML = renderCoffees(coffees);
+let song = new Audio("bob-dylan.webm");
+document.body.addEventListener("mousemove", function () {
+	song.play()
+});
