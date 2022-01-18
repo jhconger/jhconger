@@ -6,14 +6,14 @@ function renderCoffee(coffee) {
 	html += '<h3>' + coffee.name + '</h3>';
 	html += '<p class="roast">' + coffee.roast + '</p>';
 	if (favorite.id === 0) {
-		html += '<i class="far fa-star"></i> <button data-id="' + coffee.id + '" class="btn favoriteButton">Mark Favorite</button>';
+		html += '<i class="far fa-star"></i> <button data-id="' + coffee.id + '" class="btn favoriteButton m-2">Mark Favorite</button>';
 	} else if (coffee.id !== favorite.id) {
 		html += '<i class="far fa-star"></i> <button data-id="' + coffee.id + '" class="btn favoriteButton">Mark Favorite</button>';
 	} else {
 		html += '<i class="fas fa-star"></i> <button data-id="' + coffee.id + '" class="btn" id="removeFavoriteButton">Remove Favorite</button>';
 	}
-	html += '<button data-id="' + coffee.id + '" class="btn editButton">' + "Edit Coffee" + '</button>';
-	html += '<button data-id="' + coffee.id + '" class="btn deleteButton">' + "Delete Coffee" + '</button>';
+	html += '<button data-id="' + coffee.id + '" class="btn editButton m-2">' + "Edit Coffee" + '</button>';
+	html += '<button data-id="' + coffee.id + '" class="btn deleteButton m-2" >' + "Delete Coffee" + '</button>';
 	html += '<form>';
 	html += '<label>Change Name <input class="editName" data-id="' + coffee.id + '" type="text" value="' + coffee.name + '"></label>';
 	html += '<label>Change Roast <select class="editRoast" data-id="' + coffee.id + '"><option>(light roast)</option><option>(medium roast)</option><option>(dark roast)</option></select></label>';
