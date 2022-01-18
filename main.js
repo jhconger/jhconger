@@ -248,6 +248,11 @@ if (favorite.id !== 0) {
 activateButtons();
 // play a song when user interacts with page
 let song = new Audio("bob-dylan.webm");
+
 document.body.addEventListener("mousemove", function () {
+
+	var volume = song.volume;
+	console.log(song.volume); // 1
+	song.volume = 0.15;
 	song.play();
 });
