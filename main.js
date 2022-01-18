@@ -249,5 +249,5 @@ activateButtons();
 // play a song when user interacts with page
 let song = new Audio("bob-dylan.webm");
 document.body.addEventListener("mousemove", function () {
-	// song.play();
+	song.play();
 });
