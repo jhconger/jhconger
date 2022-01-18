@@ -15,8 +15,8 @@ function renderCoffee(coffee) {
 	html += '<button data-id="' + coffee.id + '" class="btn editButton m-2">' + "Edit Coffee" + '</button>';
 	html += '<button data-id="' + coffee.id + '" class="btn deleteButton m-2" >' + "Delete Coffee" + '</button>';
 	html += '<form>';
-	html += '<label>Change Name <input class="editName" data-id="' + coffee.id + '" type="text" value="' + coffee.name + '"></label>';
-	html += '<label>Change Roast <select class="editRoast" data-id="' + coffee.id + '"><option>(light roast)</option><option>(medium roast)</option><option>(dark roast)</option></select></label>';
+	html += '<label>Change Name <input style="text-align: center" class="editName" data-id="' + coffee.id + '" type="text" value="' + coffee.name + '"></label>';
+	html += '<label>Change Roast <select style="text-align: center" class="editRoast" data-id="' + coffee.id + '"><option>(light roast)</option><option>(medium roast)</option><option>(dark roast)</option></select></label>';
 	html += '</form>';
 	html += '</div>';
 	return html;
