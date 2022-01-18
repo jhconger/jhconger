@@ -12,12 +12,12 @@ function renderCoffee(coffee) {
 	} else {
 		html += '<i class="fas fa-star"></i> <button data-id="' + coffee.id + '" class="btn" id="removeFavoriteButton">Remove Favorite</button>';
 	}
+	html += '<button data-id="' + coffee.id + '" class="btn editButton">' + "Edit Coffee" + '</button>';
+	html += '<button data-id="' + coffee.id + '" class="btn deleteButton">' + "Delete Coffee" + '</button>';
 	html += '<form>';
 	html += '<label>Change Name <input class="editName" data-id="' + coffee.id + '" type="text" value="' + coffee.name + '"></label>';
 	html += '<label>Change Roast <select class="editRoast" data-id="' + coffee.id + '"><option>(light roast)</option><option>(medium roast)</option><option>(dark roast)</option></select></label>';
 	html += '</form>';
-	html += '<button data-id="' + coffee.id + '" class="btn editButton">' + "Edit Coffee" + '</button>';
-	html += '<button data-id="' + coffee.id + '" class="btn deleteButton">' + "Delete Coffee" + '</button>';
 	html += '</div>';
 	return html;
 }
