@@ -1,9 +1,7 @@
-### Hi there 👋
 
-<!--
 **jhconger/jhconger** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-<h1 align="center" font-size="100px">Hi 👋, I'm Jason Comstock</h1>
-<h3 align="center">I am an analytically minded individual who likes to solve problems with code.</h3>
+<h1 align="center" font-size="100px">Hi 👋, I'm Justin Hart Conger</h1>
+<h3 align="center">I am an analytically minded individual who likes to solve problems with code and ninja-nuity.</h3>
 
 <div align="center">
   Visit me on:<br>
