@@ -113,7 +113,7 @@ function activateButtons() {
 			// loop through coffees array and only assign the favorite if the coffee's id matches the clicked button's data-id
 			coffees.forEach(function (coffee) {
 				if (coffee.id === coffeeId) {
-					favorite = coffee;
+					favorite = JSON.parse(JSON.stringify(coffee));
 				}
 			});
 			storeFavorite();
@@ -248,11 +248,7 @@ if (favorite.id !== 0) {
 activateButtons();
 // play a song when user interacts with page
 let song = new Audio("bob-dylan.webm");
-
 document.body.addEventListener("mousemove", function () {
-
-	var volume = song.volume;
-	console.log(song.volume); // 1
 	song.volume = 0.15;
 	song.play();
 });
