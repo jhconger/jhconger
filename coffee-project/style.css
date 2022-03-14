@@ -1,0 +1,92 @@
+main {
+	position: relative;
+}
+
+main::after {
+	content: "";
+	background: url("5-50776_background-for-coffee-shop-hd-wallpaper-backgrounds-its.jpeg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.05;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	border-radius: 25px;
+}
+
+body {
+	box-shadow: rgba(0, 0, 0, 0.17) 0 -5px 5px 0 inset, rgba(0, 0, 0, 0.15) 0 -5px 5px 0 inset, rgba(0, 0, 0, 0.1) 0 -5px 5px 0 inset, rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 5px 5px, rgba(0, 0, 0, 0.09) 0 5px 5px, rgba(0, 0, 0, 0.09) 0 5px 5px, rgba(0, 0, 0, 0.09) 0 5px 5px;
+	background-color: #3E5E04;
+	background-image: linear-gradient(314deg, #527d05 0%, rgba(114, 114, 66, 0.7) 74%);
+	border-radius: 10px;
+	margin: 5em;
+	font-family: 'Orbitron', sans-serif;
+	padding: 15px;
+}
+
+h1 {
+	margin-bottom: 25px;
+}
+
+h2 {
+	margin-bottom: 25px;
+
+}
+
+h3 {
+	margin-top: 25px;
+}
+
+h2.coffeeList {
+	padding-left: 5px;
+}
+
+label {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.roast {
+	font-family: 'Ubuntu', sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: rgba(184, 134, 11, 0.13);
+	border-radius: 25px;
+	padding-left: 10px;
+}
+
+.roasted {
+	font-family: 'Ubuntu', sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: darkgoldenrod;
+	border-radius: 25px;
+	padding-left: 10px;
+}
+
+.btn {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: darkgoldenrod;
+	border-radius: 25px;
+	margin-bottom: 5px;
+
+
+}
+
+.btn:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.coffeeInput, select, input {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: darkgoldenrod;
+	border-radius: 25px;
+	color: black;
+}
+
+input::placeholder {
+	color: black;
+}
